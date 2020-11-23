@@ -107,6 +107,8 @@ module.exports = {
     },
   },
 
+  performance: { hints: false },
+
   stats: {
     all: false,
     assets: true,
