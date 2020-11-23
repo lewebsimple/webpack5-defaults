@@ -96,15 +96,6 @@ module.exports = {
       new CssMinimizerPlugin(),
     ],
     runtimeChunk: 'single',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendor',
-          chunks: 'all',
-        },
-      },
-    },
   },
 
   performance: { hints: false },
