@@ -1,10 +1,8 @@
 const { resolve } = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const { DefinePlugin } = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const pkg = require('./package.json');
 
 module.exports = {
 
@@ -75,12 +73,6 @@ module.exports = {
 
     // Clean assets directory
     new CleanWebpackPlugin(),
-
-    // Define useful constants
-    new DefinePlugin({
-      DESCRIPTION: JSON.stringify(pkg.description),
-      VERSION: JSON.stringify(pkg.version),
-    }),
 
     // Extract styles to a single CSS file
     new MiniCssExtractPlugin({
