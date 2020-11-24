@@ -103,8 +103,9 @@ module.exports = {
   stats: {
     all: false,
     assets: true,
+    assetsSpace: 50,
+    assetsSort: 'name',
     errors: true,
-    timings: true,
     warnings: true,
   },
 
